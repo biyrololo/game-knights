@@ -11,7 +11,7 @@ playerLeft.src="2left.png"
 hp.src="health.png"
 sword.src="src/sword.png"
 
-var paused = false, skins = ["31"], //["1","22","31","32"] - все скины
+var paused = true, skins = ["31"], //["1","22","31","32"] - все скины
 playerSpeed = 3, jumpSpeed = 3, playerDir=1, isMove=false, xAnim=0,yAnim=0,isAttack=false,isBlock=false,isJump=false,
 isFall=false, jumpHeight=0, isTakenDamage=false,damageDir=0,playerDamage = 2, playerDied=false, playerScore=0,playerHealth=100, playerDiedAnim=false,
 themeAudio = new Audio("src/battle theme.mp3"), audioPlayed=false, maxHealth=100;//инициализация основных переменных
@@ -771,7 +771,7 @@ themeAudio.loop=true
 themeAudio.volume=0.2
 window.addEventListener("keydown",(e)=>{ 
     if(!audioPlayed){
-        //themeAudio.play()
+        themeAudio.play()
         audioPlayed=true
     }
     if(!playerDied){
