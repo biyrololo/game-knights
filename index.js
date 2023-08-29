@@ -1,7 +1,7 @@
 const canvas = document.querySelector("canvas")//получение canvas элемента
 const c = canvas.getContext('2d'), background = new Image(), floor = new Image(),playerRight = new Image(), playerLeft = new Image(), hp = new Image(), sword = new Image()
-canvas.width = document.body.offsetWidth
-canvas.height = 576
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 c.fillStyle = 'white'
 //загрузка основных изображений
 background.src="background.png"
